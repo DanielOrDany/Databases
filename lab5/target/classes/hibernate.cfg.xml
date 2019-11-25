@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/flightradar24?serverTimezone=UTC</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">lfybkjshf</property>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Airline"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Airplane"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.AirplaneCategory"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.City"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Country"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Current"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Owner"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Point"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Route"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.SecretPassword"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.Traveler"/>
+        <mapping class="ua.lviv.iot.nikulshyn.model.SuperAdmin"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
